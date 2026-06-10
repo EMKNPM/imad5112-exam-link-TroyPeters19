@@ -17,6 +17,7 @@ class DetailedActivity : AppCompatActivity() {
     private lateinit var edtCategory: EditText
     private lateinit var edtQuantity: EditText
     private lateinit var edtComment: EditText
+    private lateinit var btnTotal: Button
     private lateinit var btnSave: Button
     private lateinit var btnBack: Button
 
@@ -40,6 +41,7 @@ class DetailedActivity : AppCompatActivity() {
         edtCategory = findViewById(R.id.edtCategory)
         edtQuantity = findViewById(R.id.edtQuantity)
         edtComment = findViewById(R.id.edtComment)
+        btnTotal = findViewById(R.id.btnTotal)
         btnSave = findViewById(R.id.btnSave)
         btnBack = findViewById(R.id.btnBack)
 
@@ -54,6 +56,22 @@ class DetailedActivity : AppCompatActivity() {
 
         // This connects the adapter to the spinner so the days appear in the dropdown
         spinner.adapter = adapter
+
+        // When the Save Data button is clicked, save the selected item's entered data.
+        btnSave.setOnClickListener {
+            saveData()
+        }
+
+        // When
+        edtCategory.setOnClickListener {
+            ca()
+        }
+
+        // When the Clear button is clicked, reset all stored weather data.
+        btnClear.setOnClickListener {
+            clearData()
+        }
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
