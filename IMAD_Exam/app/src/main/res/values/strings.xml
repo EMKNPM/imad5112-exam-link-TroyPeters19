@@ -2,4 +2,6 @@
     <string name="app_name">IMAD_Exam</string>
     <string name="campsite_commander">Campsite Commander</string>
     <string name="main_screen">Main Screen</string>
+    <string name="Main_Screen">Main Screen</string>
+    <string name="add_gear">Add Gear</string>
 </resources>
