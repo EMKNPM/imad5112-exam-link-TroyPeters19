@@ -30,6 +30,18 @@ class MainScreenActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        var totalItemsPacked = ""
+
+        for (item in DetailedActivity.itemsArray) {
+
+
+            totalItemsPacked +=
+                "Item: ${item.edtItemQuantity}\n" +
+                        "Total items packed: ${item.edtItemQuantity}\n\n"
+        }
+
+        // Displays the completed weekly weather report in the TextView.
+        tvTotal.text = totalItemsPacked
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
