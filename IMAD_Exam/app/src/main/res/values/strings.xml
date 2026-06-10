@@ -5,4 +5,9 @@
     <string name="Main_Screen">Main Screen</string>
     <string name="add_gear">Add Gear</string>
     <string name="total_items_packed">Total Items packed</string>
+    <string name="detailed_view">Detailed View</string>
+    <string name="category">Category</string>
+    <string name="comment_note">Comment/Note</string>
+    <string name="quantity_of_items">Quantity of items</string>
+    <string name="back_to_base">Back to Base</string>
 </resources>
