@@ -20,8 +20,12 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        
+        //Typecasting
+        btnMain = findViewById(R.id.btnMain)
+        btnExit = findViewById(R.id.btnExit)
 
+
+        
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
