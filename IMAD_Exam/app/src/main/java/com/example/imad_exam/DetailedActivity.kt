@@ -40,6 +40,9 @@ class DetailedActivity : AppCompatActivity() {
         edtComment = findViewById(R.id.edtComment)
         btnBack = findViewById(R.id.btnBack)
 
+        // The spinner will pull the list of items from the array
+        val itemNames = itemsArray.map { it.itemName }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
