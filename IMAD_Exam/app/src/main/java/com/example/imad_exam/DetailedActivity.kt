@@ -1,10 +1,12 @@
 package com.example.imad_exam
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -57,20 +59,36 @@ class DetailedActivity : AppCompatActivity() {
         // This connects the adapter to the spinner so the days appear in the dropdown
         spinner.adapter = adapter
 
-        // When the Save Data button is clicked, save the selected item's entered data.
+        // When the Save Data button is clicked, it saves the selected item's entered data
         btnSave.setOnClickListener {
             saveData()
         }
 
-        // When
-        edtCategory.setOnClickListener {
-            ca()
+        // When the Total Items button is clicked, it calculates the total number of items
+        btnTotal.setOnClickListener {
+            calculateTotal()
         }
 
         // When the Clear button is clicked, reset all stored weather data.
         btnClear.setOnClickListener {
             clearData()
+        // When the Back to Base is clicked, it will go back to the main screen
+        btnBack.setOnClickListener {
+
+            // The button will only work if the user enters data for all items otherwise they will be asked to enter the data with an error message
+            if (allDataEntered()) {
+                val intent = Intent(this, MainScreenActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(
+                    this,
+                    "Please enter data for all items",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
+
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -79,4 +97,11 @@ class DetailedActivity : AppCompatActivity() {
             insets
         }
     }
+
+
+
+
+
+
+
 }
