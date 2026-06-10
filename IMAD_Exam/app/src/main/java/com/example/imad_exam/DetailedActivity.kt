@@ -69,9 +69,6 @@ class DetailedActivity : AppCompatActivity() {
             calculateTotal()
         }
 
-        // When the Clear button is clicked, reset all stored weather data.
-        btnClear.setOnClickListener {
-            clearData()
         // When the Back to Base is clicked, it will go back to the main screen
         btnBack.setOnClickListener {
 
@@ -88,7 +85,7 @@ class DetailedActivity : AppCompatActivity() {
             }
         }
 
-        // Padding is adjusted so the content does not overlap the navigation options.
+        // Padding is adjusted so the content does not overlap the navigation options
         // Improves the layout of the app
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -113,9 +110,22 @@ class DetailedActivity : AppCompatActivity() {
         }
     }
 
+    private fun saveData(){
 
+        // The index will match with the item's position in the array
+        val selectItemIndex = spinner.selectedItemPosition
 
+        // This will get the text/value entered by the user
+        val catText = edtCategory.text.toString()
+        val quanText = edtQuantity.text.toString()
+        val comText = edtComment.text.toString()
 
+        // Error handling that checks if all fields are completed.
+        if (catText.isEmpty() || quanText.isEmpty() || comText.isEmpty()) {
+            Toast.makeText(this, "Please complete all fields", Toast.LENGTH_SHORT).show()
+            return
+        }
+    }
 
 
 
