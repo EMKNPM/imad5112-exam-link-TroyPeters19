@@ -1,5 +1,6 @@
 package com.example.imad_exam
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -24,9 +25,10 @@ class MainScreenActivity : AppCompatActivity() {
         tvTotal = findViewById(R.id.tvTotal)
         btnAddGear = findViewById(R.id.btnAddGear)
 
-
-        
-
+        btnAddGear.setOnClickListener {
+            val intent = Intent(this, DetailedActivity::class.java)
+            startActivity(intent)
+        }
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
