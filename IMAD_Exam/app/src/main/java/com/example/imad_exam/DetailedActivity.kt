@@ -126,6 +126,9 @@ class DetailedActivity : AppCompatActivity() {
             return
         }
 
+        // This will convert the string into a number
+        val edtItemQuantity = quanText.toIntOrNull()
+
         // Store the the user's input into the selected object from the ItemsAdded class
         itemsArray[selectItemIndex].edtItemCategory = catText
         itemsArray[selectItemIndex].edtItemQuantity = quanText
@@ -141,6 +144,7 @@ class DetailedActivity : AppCompatActivity() {
     }
 
     private fun calculateTotal(){
+        // This function calculates the total items
         // This variable will store all the entered quantities of items
         var total = 0
 
@@ -151,10 +155,16 @@ class DetailedActivity : AppCompatActivity() {
 
     }
 
-    private fun allDataEntered(){
+    private fun allDataEntered(): Boolean {
 
+        // This function check that there is data entered for all items
+        for (item in itemsArray) {
 
-    }
-
-
-}
+            // If one item is not complete, stop checking and return false
+            if (!item.dataCaptured) {
+                return false
+            }
+        }
+        // If the loop finishes, it means all the items are complete
+        return true
+    }}
