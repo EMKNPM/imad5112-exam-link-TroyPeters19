@@ -31,6 +31,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnExit.setOnClickListener {
+            finishAffinity()
+        }
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
