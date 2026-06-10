@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">IMAD_Exam</string>
+    <string name="campsite_commander">Campsite Commander</string>
+    <string name="main_screen">Main Screen</string>
 </resources>
