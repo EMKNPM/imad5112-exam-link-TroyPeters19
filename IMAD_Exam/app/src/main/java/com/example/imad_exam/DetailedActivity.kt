@@ -131,7 +131,6 @@ class DetailedActivity : AppCompatActivity() {
 
         // Store the the user's input into the selected object from the ItemsAdded class
         itemsArray[selectItemIndex].edtItemCategory = catText
-        itemsArray[selectItemIndex].edtItemQuantity = quanText
         itemsArray[selectItemIndex].edtItemComment = comText
         itemsArray[selectItemIndex].dataCaptured = true
 

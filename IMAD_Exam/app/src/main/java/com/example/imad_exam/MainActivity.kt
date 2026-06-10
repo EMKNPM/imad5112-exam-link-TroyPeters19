@@ -28,12 +28,13 @@ class MainActivity : AppCompatActivity() {
         btnMain = findViewById(R.id.btnMain)
         btnExit = findViewById(R.id.btnExit)
 
-
+        // This will take the user to the next screen
         btnMain.setOnClickListener {
             val intent = Intent(this, MainScreenActivity::class.java)
             startActivity(intent)
         }
 
+        // This will exit the user out of the app
         btnExit.setOnClickListener {
             finishAffinity()
         }
