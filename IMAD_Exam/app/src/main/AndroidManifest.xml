@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IMAD_Exam">
         <activity
+            android:name=".DetailedActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainScreenActivity"
             android:exported="false" />
         <activity
