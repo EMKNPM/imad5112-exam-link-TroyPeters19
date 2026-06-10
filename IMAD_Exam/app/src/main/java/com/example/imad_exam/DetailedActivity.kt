@@ -1,6 +1,7 @@
 package com.example.imad_exam
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
@@ -42,6 +43,12 @@ class DetailedActivity : AppCompatActivity() {
 
         // The spinner will pull the list of items from the array
         val itemNames = itemsArray.map { it.itemName }
+
+        // The adapter will place the item names into the spinner
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, itemNames)
+
+        // This will set the layout of the spinner dropdown when it is used
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
