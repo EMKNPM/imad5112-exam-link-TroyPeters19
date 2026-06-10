@@ -4,4 +4,5 @@
     <string name="main_screen">Main Screen</string>
     <string name="Main_Screen">Main Screen</string>
     <string name="add_gear">Add Gear</string>
+    <string name="total_items_packed">Total Items packed</string>
 </resources>
