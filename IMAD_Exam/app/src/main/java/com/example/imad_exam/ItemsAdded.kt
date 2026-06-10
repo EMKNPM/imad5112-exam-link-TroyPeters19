@@ -9,7 +9,7 @@ data class ItemsAdded(
     var edtItemCategory: String = "",
 
     //Stores the quantity of the item
-    var numItemQuantity: Int = 0,
+    var edtItemQuantity: Int = 0,
 
     //Stores the comment/note of the item
     var edtItemComment: String = "",

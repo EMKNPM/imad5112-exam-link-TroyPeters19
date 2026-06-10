@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+// Troy Peters
+// ST10533034
+
 class MainActivity : AppCompatActivity() {
 
     //Declarations

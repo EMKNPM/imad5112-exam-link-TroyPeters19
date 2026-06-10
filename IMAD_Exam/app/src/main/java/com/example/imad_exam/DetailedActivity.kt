@@ -128,7 +128,7 @@ class DetailedActivity : AppCompatActivity() {
 
         // Store the the user's input into the selected object from the ItemsAdded class
         itemsArray[selectItemIndex].edtItemCategory = catText
-        itemsArray[selectItemIndex].numItemQuantity = quanText
+        itemsArray[selectItemIndex].edtItemQuantity = quanText
         itemsArray[selectItemIndex].edtItemComment = comText
         itemsArray[selectItemIndex].dataCaptured = true
 
@@ -139,5 +139,22 @@ class DetailedActivity : AppCompatActivity() {
             Toast.LENGTH_SHORT
         ).show()
     }
+
+    private fun calculateTotal(){
+        // This variable will store all the entered quantities of items
+        var total = 0
+
+        // This will loop through each ItemsAdded object in the array
+        for (item in itemsArray) {
+            total += item.edtItemQuantity
+        }
+
+    }
+
+    private fun allDataEntered(){
+
+
+    }
+
 
 }
