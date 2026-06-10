@@ -3,7 +3,7 @@ Student Name: Troy Peters
 Student Number: ST10533034
 
 GitHub Repository
-
+C:\Users\lab_services_student\Desktop\imad5112-exam-link-TroyPeters19
 
 The application was developed using Kotlin in Android Studio. It demonstrates the use of arrays, loops, functions, screen navigation, data classes, input validation, and error handling.
 
