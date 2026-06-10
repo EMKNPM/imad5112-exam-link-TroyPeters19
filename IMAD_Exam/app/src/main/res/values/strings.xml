@@ -10,4 +10,5 @@
     <string name="comment_note">Comment/Note</string>
     <string name="quantity_of_items">Quantity of items</string>
     <string name="back_to_base">Back to Base</string>
+    <string name="save_data">Save Data</string>
 </resources>

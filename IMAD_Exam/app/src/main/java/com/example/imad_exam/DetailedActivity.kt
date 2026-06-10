@@ -17,6 +17,7 @@ class DetailedActivity : AppCompatActivity() {
     private lateinit var edtCategory: EditText
     private lateinit var edtQuantity: EditText
     private lateinit var edtComment: EditText
+    private lateinit var btnSave: Button
     private lateinit var btnBack: Button
 
     // A companion object is used so that both the MainScreen and DetailedActivity screens are able use the array directly
@@ -39,6 +40,7 @@ class DetailedActivity : AppCompatActivity() {
         edtCategory = findViewById(R.id.edtCategory)
         edtQuantity = findViewById(R.id.edtQuantity)
         edtComment = findViewById(R.id.edtComment)
+        btnSave = findViewById(R.id.btnSave)
         btnBack = findViewById(R.id.btnBack)
 
         // The spinner will pull the list of items from the array
@@ -49,6 +51,9 @@ class DetailedActivity : AppCompatActivity() {
 
         // This will set the layout of the spinner dropdown when it is used
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        // This connects the adapter to the spinner so the days appear in the dropdown
+        spinner.adapter = adapter
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
