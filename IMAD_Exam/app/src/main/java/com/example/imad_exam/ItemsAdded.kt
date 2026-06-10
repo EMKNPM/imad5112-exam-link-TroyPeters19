@@ -6,7 +6,7 @@ data class ItemsAdded(
     val itemName : String,
 
     //Stores the category(eg. Food,shelter or Safety)
-    var edtItemCategory: String = "",
+    var edtItemCategory: String,
 
     //Stores the quantity of the item
     var numItemQuantity: Int = 0,
